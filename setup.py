@@ -1,6 +1,6 @@
 import sqlite3
 
-class FileHandler():
+class DatabaseHandler():
     def __init__(self):
         self.connection = sqlite3.connect("database.db")
         self.cursor = self.connection.cursor()
@@ -17,6 +17,6 @@ class FileHandler():
         self.connection.close()
 
 
-file_handler = FileHandler()
-file_handler.create_table()
-file_handler.close()
+database_handler = DatabaseHandler()
+database_handler.create_table()
+database_handler.close()
